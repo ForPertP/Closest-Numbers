@@ -13,10 +13,6 @@ vector<string> split(const string &);
  * The function accepts INTEGER_ARRAY arr as parameter.
  */
 
-vector<int> closestNumbers(vector<int> arr) {
-
-}
-
 vector<int> closestNumbers(vector<int> arr)
 {
     vector<int> result;
