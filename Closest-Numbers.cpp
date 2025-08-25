@@ -34,9 +34,9 @@ vector<int> closestNumbers(vector<int> arr)
             result.push_back(arr[i + 1]);
         }
     }
+
     return result;
 }
-
 
 
 int main()
