@@ -11,3 +11,21 @@ using System.Runtime.Serialization;
 using System.Text.RegularExpressions;
 using System.Text;
 using System;
+
+class Result
+{
+
+    /*
+     * Complete the 'closestNumbers' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+    public static List<int> closestNumbers(List<int> arr)
+    {
+
+    }
+
+}
+
