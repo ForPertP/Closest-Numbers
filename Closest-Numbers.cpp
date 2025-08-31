@@ -39,6 +39,30 @@ vector<int> closestNumbers(vector<int> arr)
 }
 
 
+vector<int> closestNumbers2(vector<int> arr)
+{
+    vector<int> result;
+    if (arr.size() < 2) return result;
+
+    sort(arr.begin(), arr.end());
+
+    vector<int> diffs;
+    for (size_t i = 0; i < arr.size() - 1; i++) {
+        diffs.push_back(arr[i + 1] - arr[i]);
+    }
+
+    int minDiff = *min_element(diffs.begin(), diffs.end());
+
+    for (size_t i = 0; i < diffs.size(); i++) {
+        if (diffs[i] == minDiff) {
+            result.push_back(arr[i]);
+            result.push_back(arr[i + 1]);
+        }
+    }
+    return result;
+}
+
+
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
