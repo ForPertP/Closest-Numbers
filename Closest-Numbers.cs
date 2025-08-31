@@ -24,9 +24,25 @@ class Result
 
     public static List<int> closestNumbers(List<int> arr)
     {
+       if (arr.Count < 2) return new List<int>();
 
+        arr.Sort();
+
+        var diffs = Enumerable.Range(0, arr.Count - 1)
+                              .Select(i => arr[i + 1] - arr[i])
+                              .ToList();
+
+        int minDiff = diffs.Min();
+
+        var result = new List<int>();
+        foreach (var i in Enumerable.Range(0, diffs.Count).Where(i => diffs[i] == minDiff))
+        {
+            result.Add(arr[i]);
+            result.Add(arr[i + 1]);
+        }
+
+        return result;
     }
-
 
     public static List<int> closestNumbers2(List<int> arr)
     {
