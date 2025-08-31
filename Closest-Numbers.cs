@@ -27,6 +27,13 @@ class Result
 
     }
 
+
+    public static List<int> closestNumbers2(List<int> arr)
+    {
+
+    }
+
+    
 }
 
 
