@@ -44,12 +44,29 @@ class Result
         return result;
     }
 
+    
     public static List<int> closestNumbers2(List<int> arr)
     {
+        var result = new List<int>();
+        if (arr.Count < 2) return result;
 
-    }
+        arr.Sort();
 
-    
+        var diffs = new List<int>();
+        for (int i = 0; i < arr.Count - 1; i++) {
+            diffs.Add(arr[i + 1] - arr[i]);
+        }
+
+        int minDiff = diffs.Min();
+
+        for (int i = 0; i < diffs.Count; i++) {
+            if (diffs[i] == minDiff) {
+                result.Add(arr[i]);
+                result.Add(arr[i + 1]);
+            }
+        }
+        return result;
+    }    
 }
 
 
